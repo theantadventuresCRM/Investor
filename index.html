@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Ant Adventures — Pre-Seed Investment Opportunity 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#2E7D52;--green-dark:#1a5c3a;--green-mid:#3d9966;--green-light:#E8F5EF;--green-pale:#f2faf6;
+  --coral:#E8472A;--coral-light:#FAECE7;--coral-dark:#b83318;
+  --gold:#C9A84C;--gold-light:#FBF5E6;
+  --gray-100:#f8f8f6;--gray-200:#f0eeea;--gray-300:#e2e0db;--gray-500:#8a8880;--gray-800:#2c2c2a;
+  --text:#2c2c2a;--text-muted:#5f5e5a;--text-light:#9a9890;
+  --radius:12px;--radius-sm:8px;--radius-lg:20px;
+}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',sans-serif;color:var(--text);background:#fff;font-size:15px;line-height:1.7;overflow-x:hidden}
+a{color:var(--green);text-decoration:none}
+
+/* ─── HERO ─── */
+.hero{background:var(--green-dark);color:#fff;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,.03)}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-80px;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.025)}
+.hero-eyebrow{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;opacity:.6;margin-bottom:1.5rem;position:relative;z-index:1}
+.hero-ant{font-size:3.5rem;margin-bottom:1rem;position:relative;z-index:1}
+.hero h1{font-size:3.2rem;font-weight:700;letter-spacing:-1.5px;line-height:1.15;margin-bottom:1rem;position:relative;z-index:1;max-width:700px}
+.hero h1 em{font-style:normal;color:rgba(255,255,255,.5)}
+.hero-tagline{font-size:1.15rem;opacity:.75;max-width:500px;line-height:1.7;margin-bottom:2.5rem;position:relative;z-index:1}
+.hero-pills{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;position:relative;z-index:1}
+.hero-pill{padding:7px 18px;border-radius:30px;font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9)}
+.hero-pill.accent{background:var(--coral);border-color:var(--coral)}
+.scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);font-size:12px;opacity:.4;z-index:1;letter-spacing:1px;text-transform:uppercase}
+.scroll-arrow{display:block;margin:.4rem auto 0;width:1px;height:40px;background:rgba(255,255,255,.3);position:relative}
+.scroll-arrow::after{content:'';position:absolute;bottom:0;left:-3px;width:7px;height:7px;border-right:1px solid rgba(255,255,255,.4);border-bottom:1px solid rgba(255,255,255,.4);transform:rotate(45deg)}
+
+/* ─── NAV ─── */
+.nav{background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--gray-300);padding:0 2.5rem;display:flex;align-items:center;gap:0;overflow-x:auto;position:sticky;top:0;z-index:100}
+.nav::-webkit-scrollbar{height:3px}
+.nav-logo{font-size:13px;font-weight:700;color:var(--green);white-space:nowrap;padding:.85rem 1.5rem .85rem 0;margin-right:.5rem;border-right:1px solid var(--gray-300)}
+.nav a{padding:.85rem .85rem;font-size:12.5px;font-weight:500;color:var(--text-muted);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;display:block;transition:all .2s}
+.nav a:hover,.nav a.active{color:var(--green);border-bottom-color:var(--green)}
+
+/* ─── LAYOUT ─── */
+.wrap{max-width:960px;margin:0 auto;padding:0 2rem}
+.section{padding:5rem 0;scroll-margin-top:56px}
+.section.alt{background:var(--gray-100)}
+.section.dark{background:var(--green-dark);color:#fff}
+.section.green{background:var(--green);color:#fff}
+
+/* ─── SECTION LABELS ─── */
+.sec-eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:.75rem}
+.sec-eyebrow.light{color:rgba(255,255,255,.6)}
+.sec-title{font-size:2rem;font-weight:700;letter-spacing:-.5px;line-height:1.25;margin-bottom:1rem;color:var(--text)}
+.sec-title.light{color:#fff}
+.sec-lead{font-size:1.05rem;color:var(--text-muted);max-width:600px;line-height:1.75;margin-bottom:2.5rem}
+.sec-lead.light{color:rgba(255,255,255,.75)}
+
+/* ─── DIVIDER ─── */
+.green-bar{width:48px;height:4px;background:var(--green);border-radius:2px;margin-bottom:1.5rem}
+.green-bar.light{background:rgba(255,255,255,.5)}
+.green-bar.coral{background:var(--coral)}
+
+/* ─── STAT CARDS ─── */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:2rem 0}
+.stat{background:var(--green-light);border-radius:var(--radius);padding:1.4rem 1.5rem}
+.stat-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--green);margin-bottom:.4rem}
+.stat-value{font-size:2rem;font-weight:700;color:var(--green);line-height:1.1}
+.stat-sub{font-size:12px;color:var(--green);opacity:.75;margin-top:.3rem}
+.stat.dark-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15)}
+.stat.dark-card .stat-label,.stat.dark-card .stat-value,.stat.dark-card .stat-sub{color:#fff}
+.stat.dark-card .stat-label{opacity:.65}
+.stat.dark-card .stat-sub{opacity:.6}
+.stat.coral-card{background:var(--coral-light)}
+.stat.coral-card .stat-label,.stat.coral-card .stat-value,.stat.coral-card .stat-sub{color:var(--coral)}
+
+/* ─── DNA CARDS ─── */
+.dna-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:2rem 0}
+.dna{background:#fff;border:1px solid var(--gray-300);border-radius:var(--radius);padding:1.75rem;border-top:4px solid var(--green)}
+.dna.c{border-top-color:var(--coral)}
+.dna.g{border-top-color:var(--gold)}
+.dna-icon{font-size:2rem;margin-bottom:.75rem}
+.dna-title{font-weight:700;font-size:1.05rem;margin-bottom:.5rem;color:var(--text)}
+.dna-desc{font-size:13.5px;color:var(--text-muted);line-height:1.65}
+
+/* ─── PROBLEM CARDS ─── */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:2rem 0}
+.prob{background:#fff;border:1px solid var(--gray-300);border-radius:var(--radius);padding:1.5rem;border-left:4px solid var(--gray-300)}
+.prob.bad{border-left-color:var(--coral)}
+.prob.good{border-left-color:var(--green)}
+.prob-label{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:.5rem;color:var(--text-muted)}
+.prob.bad .prob-label{color:var(--coral)}
+.prob.good .prob-label{color:var(--green)}
+.prob-text{font-size:14px;color:var(--text);line-height:1.6}
+
+/* ─── TRACTION TABLE ─── */
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--gray-300);margin:1.5rem 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
+thead th{background:var(--green);color:#fff;padding:11px 16px;text-align:left;font-weight:600;font-size:12.5px;letter-spacing:.2px}
+tbody td{padding:10px 16px;border-bottom:1px solid var(--gray-200);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even) td{background:var(--gray-100)}
+tbody tr:hover td{background:var(--green-light)}
+.pos{color:#1a7a4a;font-weight:700}
+.neg{color:var(--coral);font-weight:700}
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11.5px;font-weight:600}
+.b-green{background:var(--green-light);color:var(--green)}
+.b-coral{background:var(--coral-light);color:var(--coral)}
+.b-purple{background:#EEEDFE;color:#534AB7}
+
+/* ─── FOUNDER ─── */
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:2rem 0}
+.founder{background:#fff;border:1px solid var(--gray-300);border-radius:var(--radius);padding:2rem}
+.founder.phuc{border-top:5px solid var(--green)}
+.founder.tai{border-top:5px solid var(--coral)}
+.f-head{display:flex;align-items:center;gap:14px;margin-bottom:1.25rem}
+.f-av{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0}
+.av-g{background:var(--green-light);color:var(--green)}
+.av-c{background:var(--coral-light);color:var(--coral)}
+.f-name{font-weight:700;font-size:1.05rem}
+.f-role{font-size:12px;color:var(--text-muted)}
+.f-points{list-style:none}
+.f-points li{font-size:13.5px;color:var(--text-muted);padding:.35rem 0 .35rem 1.3rem;position:relative;line-height:1.55;border-bottom:1px solid var(--gray-200)}
+.f-points li:last-child{border-bottom:none}
+.f-points li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700;font-size:11px;top:.45rem}
+.founder.tai .f-points li::before{color:var(--coral)}
+
+/* ─── MODEL CARDS ─── */
+.model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:2rem 0}
+.model-card{border-radius:var(--radius);padding:1.5rem;background:var(--green-light)}
+.model-card.m2{background:var(--coral-light)}
+.model-card.m3{background:#F0EEFF}
+.mc-label{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+.model-card.m2 .mc-label{color:var(--coral)}
+.model-card.m3 .mc-label{color:#534AB7}
+.mc-value{font-size:1.6rem;font-weight:700;color:var(--green);line-height:1.1;margin-bottom:.3rem}
+.model-card.m2 .mc-value{color:var(--coral)}
+.model-card.m3 .mc-value{color:#534AB7}
+.mc-desc{font-size:12.5px;line-height:1.6;color:var(--text-muted)}
+
+/* ─── TIMELINE ─── */
+.timeline{position:relative;padding-left:2.5rem;margin:2rem 0}
+.timeline::before{content:'';position:absolute;left:.7rem;top:8px;bottom:8px;width:2px;background:rgba(255,255,255,.2)}
+.tl-item{position:relative;margin-bottom:2.25rem}
+.tl-dot{position:absolute;left:-1.85rem;width:16px;height:16px;border-radius:50%;top:4px;border:3px solid var(--green-dark);background:#fff}
+.tl-dot.now{background:var(--gold);border-color:var(--gold)}
+.tl-dot.p2{background:rgba(255,255,255,.4);border-color:rgba(255,255,255,.4)}
+.tl-dot.p3{background:var(--coral);border-color:var(--coral)}
+.tl-year{font-size:12px;font-weight:700;opacity:.6;margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.5px}
+.tl-revenue{font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.tl-revenue.dim{opacity:.65}
+.tl-desc{font-size:13px;opacity:.7;line-height:1.6}
+
+/* ─── ASK / USE OF FUNDS ─── */
+.ask-hero{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;margin:2rem 0}
+.ask-amount{font-size:3.5rem;font-weight:700;color:#fff;line-height:1}
+.ask-amount span{font-size:1.5rem;opacity:.6;vertical-align:super}
+.ask-sub{font-size:.95rem;opacity:.65;margin-top:.5rem}
+.ask-detail{display:flex;justify-content:center;gap:3rem;margin-top:2rem;flex-wrap:wrap}
+.ask-item-num{font-size:1.5rem;font-weight:700}
+.ask-item-label{font-size:12px;opacity:.6;margin-top:.15rem}
+.funds-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.5rem 0}
+.fund-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:1.2rem 1.4rem}
+.fund-name{font-weight:700;font-size:.9rem;margin-bottom:.3rem}
+.fund-amount{font-size:1.1rem;font-weight:700;color:rgba(255,255,255,.8)}
+.fund-desc{font-size:12px;opacity:.6;margin-top:.3rem;line-height:1.5}
+
+/* ─── RETURN ─── */
+.return-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:2rem 0}
+.ret{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:1.5rem}
+.ret-num{font-size:2rem;font-weight:700;color:var(--gold);margin-bottom:.3rem}
+.ret-title{font-weight:700;font-size:.9rem;margin-bottom:.5rem}
+.ret-desc{font-size:12.5px;opacity:.65;line-height:1.55}
+
+/* ─── QUOTE ─── */
+.big-quote{background:var(--green-light);border-radius:var(--radius-lg);padding:2.5rem 3rem;margin:2.5rem 0;border-left:5px solid var(--green)}
+.big-quote p{font-size:1.15rem;color:var(--green-dark);line-height:1.8;font-style:italic}
+.big-quote .attribution{margin-top:1rem;font-size:12.5px;color:var(--green);font-style:normal;font-weight:600;opacity:.75}
+
+/* ─── HIGHLIGHT BOX ─── */
+.highlight{background:var(--green-light);border-radius:var(--radius);padding:1.25rem 1.5rem;margin:1.25rem 0;border-left:4px solid var(--green)}
+.highlight p{font-size:14px;color:var(--green-dark);line-height:1.65}
+.highlight.coral{background:var(--coral-light);border-left-color:var(--coral)}
+.highlight.coral p{color:var(--coral-dark)}
+.highlight.gold{background:var(--gold-light);border-left-color:var(--gold)}
+.highlight.gold p{color:#7a5e1a}
+
+/* ─── CLOSE ─── */
+.close-section{background:var(--green-dark);color:#fff;padding:6rem 2rem;text-align:center}
+.close-section h2{font-size:2.5rem;font-weight:700;letter-spacing:-1px;margin-bottom:1rem;line-height:1.2}
+.close-section p{font-size:1.05rem;opacity:.7;max-width:520px;margin:0 auto 2.5rem}
+.close-contacts{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-top:2rem}
+.contact-item{text-align:center}
+.contact-name{font-weight:700;font-size:.95rem;margin-bottom:.25rem}
+.contact-role{font-size:12px;opacity:.55;margin-bottom:.4rem}
+.contact-email{font-size:13px;color:var(--gold);opacity:.9}
+
+footer{background:#111;color:rgba(255,255,255,.35);padding:1.5rem 2rem;text-align:center;font-size:12px;letter-spacing:.3px}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:680px){
+  .hero h1{font-size:2.2rem}
+  .dna-grid,.problem-grid,.founder-grid,.funds-grid,.return-grid,.model-grid{grid-template-columns:1fr}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .ask-detail{gap:1.5rem}
+  .big-quote{padding:1.75rem}
+  .wrap{padding:0 1.25rem}
+  .section{padding:3.5rem 0}
+}
+@media print{.nav{display:none}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-eyebrow">Pre-Seed Investment Opportunity · 2026</div>
+  <div class="hero-ant">🐜</div>
+  <h1>The <em>real</em> journey through Vietnam</h1>
+  <p class="hero-tagline">Boutique luxury inbound travel — where every journey is crafted exclusively for one person, and no two itineraries are ever the same.</p>
+  <div class="hero-pills">
+    <span class="hero-pill">Phuc Vo &amp; Tai Pham</span>
+    <span class="hero-pill">$800–$1,500+ per person per day</span>
+    <span class="hero-pill accent">Pre-Seed · 2026</span>
+  </div>
+  <div class="scroll-hint">Scroll down<span class="scroll-arrow"></span></div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <span class="nav-logo">🐜 The Ant Adventures</span>
+  <a href="#s1">Our Story</a>
+  <a href="#s2">Opportunity</a>
+  <a href="#s3">Solution</a>
+  <a href="#s4">Traction</a>
+  <a href="#s5">Team</a>
+  <a href="#s6">Model</a>
+  <a href="#s7">Roadmap</a>
+  <a href="#s8">The Ask</a>
+  <a href="#s9">Returns</a>
+  <a href="#s10">Contact</a>
+</nav>
+
+<!-- S1: OUR STORY -->
+<div class="section" id="s1">
+  <div class="wrap">
+    <div class="sec-eyebrow">Why we started</div>
+    <div class="green-bar"></div>
+    <h2 class="sec-title">Phuc grew up in Trà Vinh.<br>That's our unfair advantage.</h2>
+    <p class="sec-lead">After 15 years guiding thousands of international guests across Vietnam — from north to south — Phuc noticed something: <strong>every tour company was selling exactly the same thing.</strong> Same itineraries. Same hotels. Same packaged experiences.</p>
+
+    <div class="big-quote">
+      <p>"My clients weren't short on money. They were short on someone who truly knew Vietnam — not the Vietnam from a brochure, but the Vietnam from within the land, from its alleyways, from people who actually live there. That's what I can give them."</p>
+      <div class="attribution">— Phuc Vo, Founder &amp; CEO</div>
+    </div>
+
+    <p style="color:var(--text-muted);font-size:14.5px;line-height:1.8">The Ant Adventures was born from a simple question: <em>What could a son of Trà Vinh, with 15 years of experience and a co-founder who knows how to build systems — actually create?</em></p>
+  </div>
+</div>
+
+<!-- S2: OPPORTUNITY -->
+<div class="section alt" id="s2">
+  <div class="wrap">
+    <div class="sec-eyebrow">The Market</div>
+    <div class="green-bar"></div>
+    <h2 class="sec-title">Vietnam is at a golden moment for luxury travel</h2>
+    <p class="sec-lead">International tourism into Vietnam is booming post-COVID — but the UHNW (Ultra High Net Worth) segment is almost entirely underserved by operators who truly understand luxury at that level.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-label">International visitors 2025</div><div class="stat-value">17M+</div><div class="stat-sub">Arrivals into Vietnam</div></div>
+      <div class="stat"><div class="stat-label">Our price point</div><div class="stat-value">$800–$1,500+</div><div class="stat-sub">USD per person per day</div></div>
+      <div class="stat"><div class="stat-label">Average booking value</div><div class="stat-value">$15K–$40K</div><div class="stat-sub">Per group</div></div>
+      <div class="stat coral-card"><div class="stat-label">10-year revenue target</div><div class="stat-value">$10M</div><div class="stat-sub">Annual revenue</div></div>
+    </div>
+
+    <div class="highlight gold">
+      <p><strong>Vietnam ranks in the top 5 luxury destinations in Asia</strong> — alongside Japan, Bhutan, and the Maldives. But while those destinations are reaching saturation, Vietnam remains pristine, deeply authentic, and largely untapped at the UHNW level.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S3: SOLUTION -->
+<div class="section" id="s3">
+  <div class="wrap">
+    <div class="sec-eyebrow">What makes us different</div>
+    <div class="green-bar"></div>
+    <h2 class="sec-title">Not a tour company.<br>A bespoke experience studio.</h2>
+    <p class="sec-lead">While competitors serve hundreds of guests with the same program, The Ant Adventures never creates two identical journeys. Every itinerary is built from scratch, for one person, with one goal: a story they'll tell for the rest of their lives.</p>
+
+    <div class="dna-grid">
+      <div class="dna">
+        <div class="dna-icon">✦</div>
+        <div class="dna-title">Bespoke — No two journeys alike</div>
+        <div class="dna-desc">Every itinerary is designed from scratch for each guest. No "Program A, B, or C." No group tours. Every traveler is the only VIP on their journey.</div>
+      </div>
+      <div class="dna c">
+        <div class="dna-icon">🌿</div>
+        <div class="dna-title">Depth — Genuinely local, genuinely deep</div>
+        <div class="dna-desc">Places no guidebook mentions. People only Phuc knows. An invisible network built over 15 years — impossible to replicate from the outside.</div>
+      </div>
+      <div class="dna g">
+        <div class="dna-icon">🔒</div>
+        <div class="dna-title">Discretion — Quiet luxury, always</div>
+        <div class="dna-desc">UHNW clients don't want to be seen. They want privacy, security, and service delivered at the highest standard — quietly and without exception.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem">
+      <h3 style="font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);margin-bottom:1.25rem">What the market does wrong — and how we do it differently</h3>
+      <div class="problem-grid">
+        <div class="prob bad">
+          <div class="prob-label">❌ How competitors operate</div>
+          <div class="prob-text">Groups of 14–20 people. Pre-selected hotels on a fixed list. Guides who don't know their guests' names. The same program for everyone.</div>
+        </div>
+        <div class="prob good">
+          <div class="prob-label">✓ The Ant Adventures</div>
+          <div class="prob-text">Individuals and small families only. Hotels chosen for fit — never for commissions. Phuc knows each guest's name, preferences, and what they dream of seeing.</div>
+        </div>
+        <div class="prob bad">
+          <div class="prob-label">❌ How competitors operate</div>
+          <div class="prob-text">Foreign-owned operators outsource all operations to local partners. No Vietnamese authenticity. No soul. No real connection to the land.</div>
+        </div>
+        <div class="prob good">
+          <div class="prob-label">✓ The Ant Adventures</div>
+          <div class="prob-text">Our founder is Vietnamese. Born in Trà Vinh. Has traveled Vietnam for 15 years. This authenticity cannot be bought — it's who we are.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S4: TRACTION -->
+<div class="section dark" id="s4">
+  <div class="wrap">
+    <div class="sec-eyebrow light">Proof it works</div>
+    <div class="green-bar light"></div>
+    <h2 class="sec-title light">We've already started.<br>The numbers speak for themselves.</h2>
+    <p class="sec-lead light">From February to May 2026 — 4 months, zero marketing budget, no website, no formal office. Just an exceptional product and word-of-mouth referrals.</p>
+
+    <div class="stat-grid">
+      <div class="stat dark-card"><div class="stat-label">Total Revenue</div><div class="stat-value">158M VND</div><div class="stat-sub">~$6,213 USD · 4 months</div></div>
+      <div class="stat dark-card"><div class="stat-label">Net Profit</div><div class="stat-value">+80.9M VND</div><div class="stat-sub">~$3,173 USD</div></div>
+      <div class="stat dark-card"><div class="stat-label">Profit Margin</div><div class="stat-value">~51%</div><div class="stat-sub">Exceptionally high for early stage</div></div>
+      <div class="stat dark-card"><div class="stat-label">Tours Completed</div><div class="stat-value">8 tours</div><div class="stat-sub">100% guest satisfaction</div></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Month</th><th>Tour / Client</th><th>Revenue</th><th>Profit</th></tr></thead>
+        <tbody>
+          <tr><td>Feb 2026</td><td>Andrew McFarland — Deposit (tour Dec 2026)</td><td>38,538,000 VND</td><td class="pos">+38,538,000</td></tr>
+          <tr><td>Feb 2026</td><td>ILV — The Railway Tour</td><td>10,450,000 VND</td><td class="pos">+10,450,000</td></tr>
+          <tr><td>Mar 2026</td><td>Uma Lerner</td><td>3,588,000 VND</td><td class="pos">+1,768,000</td></tr>
+          <tr><td>Mar 2026</td><td>Chi My — In Hanoi (Full Tour)</td><td>63,775,000 VND</td><td class="pos">+24,840,000</td></tr>
+          <tr><td>Apr 2026</td><td>April 30th Tour — Tim Ong The (12 pax) ⚡ Brand PR</td><td>23,500,000 VND</td><td class="neg">−13,256,000 ¹</td></tr>
+          <tr><td>May 2026</td><td>Charu — First Railway in Indochina #1</td><td>17,460,000 VND</td><td class="pos">+17,460,000</td></tr>
+          <tr><td>May 2026</td><td>Charu — First Railway in Indochina #2</td><td>1,116,000 VND</td><td class="pos">+1,116,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;opacity:.5;margin-top:.5rem">¹ The April 30th tour was a deliberate brand activation — the cost was a marketing investment, not a loss. Output: real on-location content, high-quality photography, genuine client testimonials.</p>
+
+    <div class="highlight gold" style="margin-top:2rem;border-left-color:var(--gold);background:rgba(201,168,76,.12)">
+      <p style="color:rgba(255,255,255,.85)"><strong style="color:var(--gold)">The most important point:</strong> A 51% profit margin achieved with no website, no paid marketing, and no formal office. This is proof the model works — even in its most minimal state. With investment, this scales.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S5: TEAM -->
+<div class="section" id="s5">
+  <div class="wrap">
+    <div class="sec-eyebrow">The people behind it</div>
+    <div class="green-bar"></div>
+    <h2 class="sec-title">Two perspectives that perfectly complement each other</h2>
+    <p class="sec-lead">Phuc is the heart and soul of the product. Tai is the system and growth engine. Together — this is the right team at exactly the right moment.</p>
+
+    <div class="founder-grid">
+      <div class="founder phuc">
+        <div class="f-head">
+          <div class="f-av av-g">PV</div>
+          <div>
+            <div class="f-name">Phuc Vo</div>
+            <div class="f-role">Founder &amp; CEO · Ho Chi Minh City</div>
+          </div>
+        </div>
+        <ul class="f-points">
+          <li><strong>15 years</strong> as a professional inbound guide — Vietnam from north to south</li>
+          <li>Traveled <strong>20+ countries</strong> — understands international luxury expectations</li>
+          <li>Built a team of <strong>100 guides</strong> at TNK Travel — knows how to scale</li>
+          <li>Founded 2 startups: "Saigon Morning Ride" + "Satori Travel"</li>
+          <li>Deep network across Saigon's travel community — suppliers, guides, cultural experts</li>
+          <li>A son of Trà Vinh — authenticity that no foreign operator can replicate</li>
+        </ul>
+      </div>
+      <div class="founder tai">
+        <div class="f-head">
+          <div class="f-av av-c">TP</div>
+          <div>
+            <div class="f-name">Tai Pham</div>
+            <div class="f-role">Co-Founder, Head of Sales · Long Xuyen</div>
+          </div>
+        </div>
+        <ul class="f-points">
+          <li><strong>10 years</strong> as both guide and branch director simultaneously — both perspectives</li>
+          <li>Scaled a team <strong>from 3 to 17 people</strong> — real recruitment and retention systems</li>
+          <li>Built a <strong>self-running operations model</strong> — systems-first thinking from day one</li>
+          <li>Owns pricing strategy, CRM architecture, and SOPs — the infrastructure luxury needs</li>
+          <li><strong>Mitel AI CRM</strong> — building a proprietary tech platform for The Ant Adventures</li>
+          <li>SaaS upside: potential to sell the CRM to Vietnam's travel industry as a second revenue stream</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="big-quote" style="margin-top:2rem">
+      <p>"We don't sell tours. We create experiences that guests will talk about for the rest of their lives. Our core value is not revenue — it's the value we create for each individual human being."</p>
+      <div class="attribution">— Phuc Vo &amp; Tai Pham, Shared Mission</div>
+    </div>
+  </div>
+</div>
+
+<!-- S6: BUSINESS MODEL -->
+<div class="section alt" id="s6">
+  <div class="wrap">
+    <div class="sec-eyebrow">How we make money</div>
+    <div class="green-bar"></div>
+    <h2 class="sec-title">Simple model. High margins. Asset-light.</h2>
+    <p class="sec-lead">No heavy assets — no hotels, no vehicles. Just intellectual product, a network of people, and the ability to design experiences that simply cannot be found anywhere else.</p>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="mc-label">Minimum price floor</div>
+        <div class="mc-value">$800</div>
+        <div class="mc-desc">USD per person per day. Non-negotiable. Never lower.</div>
+      </div>
+      <div class="model-card m2">
+        <div class="mc-label">Value per booking</div>
+        <div class="mc-value">$15K–$40K</div>
+        <div class="mc-desc">Average per group. Families of 4–6, 10–15 day journeys.</div>
+      </div>
+      <div class="model-card m3">
+        <div class="mc-label">Target gross margin</div>
+        <div class="mc-value">30–35%</div>
+        <div class="mc-desc">After tour costs. Currently achieving 51% — room to optimize.</div>
+      </div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Scenario</th><th>Bookings / year</th><th>Avg booking</th><th>Revenue</th><th>Net (30%)</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge b-green">2026 — Proof of Concept</span></td><td>10</td><td>$3,000–$5,000</td><td style="font-weight:700">$30K–$50K</td><td class="pos">$9K–$15K</td></tr>
+          <tr><td><span class="badge b-purple">2027 — Acceleration</span></td><td>35–40</td><td>$5,000–$8,000</td><td style="font-weight:700">$175K–$320K</td><td class="pos">$52K–$96K</td></tr>
+          <tr><td><span class="badge b-coral">2028 — Scale</span></td><td>65–80</td><td>$12,000–$20,000</td><td style="font-weight:700">$780K–$1.6M</td><td class="pos">$234K–$480K</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight">
+      <p><strong>B2B partnerships are the single biggest revenue lever:</strong> One signed Virtuoso-tier agent (US/Australia/Europe) can send 10–20 bookings per year with near-zero additional marketing cost. This is why the 2027 target is Virtuoso Travel Week in Las Vegas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S7: ROADMAP -->
+<div class="section green" id="s7">
+  <div class="wrap">
+    <div class="sec-eyebrow light">10-Year Roadmap</div>
+    <div class="green-bar light"></div>
+    <h2 class="sec-title light">From $30K to $10M — one deliberate step at a time</h2>
+    <p class="sec-lead light">A clear 3-phase roadmap. Each phase builds the foundation for the next. No unrealistic leaps. Every milestone is earned.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot now"></div>
+        <div class="tl-year">2026 · Phase 1 — Foundation</div>
+        <div class="tl-revenue">$30K – $50K</div>
+        <div class="tl-desc">10 bookings · Website live July · 3 Signature Products · Team of 5 · B2B: Make Your Asia, Charu, Adi · Legal structure complete · Investment from Ms. Thuy</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot now"></div>
+        <div class="tl-year">2027 · Phase 1 — Acceleration</div>
+        <div class="tl-revenue">$150K – $250K</div>
+        <div class="tl-desc">35–40 tours · Long Xuyen office opens · Mitel AI CRM Phase 2 live · First US trade show (Virtuoso Travel Week Las Vegas) · Ms. Ngoc converting Australian clients</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot now"></div>
+        <div class="tl-year">2028 · Phase 1 — Proof at Scale</div>
+        <div class="tl-revenue">$700K – $1M</div>
+        <div class="tl-desc">65–80 tours · Team of 10–12 · First Virtuoso-tier agent signed · Average booking $12K–$20K · Full product portfolio North + Central + South</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot p2"></div>
+        <div class="tl-year">2029–2032 · Phase 2 — Expansion</div>
+        <div class="tl-revenue dim">$1.5M → $5M</div>
+        <div class="tl-desc">Expand into Laos (Luang Prabang) and Cambodia (Siem Reap) · Team 15–30 · Traveller Made / Signature Travel Network membership · Private Members Club concept</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot p3"></div>
+        <div class="tl-year">2033–2035 · Phase 3 — Market Leadership</div>
+        <div class="tl-revenue" style="color:var(--gold)">$10,000,000</div>
+        <div class="tl-desc">Team of 50 · The Ant Adventures = the world's leading Indochina luxury brand · Private Jet tours · Legacy Journeys by invitation only</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S8: THE ASK -->
+<div class="section dark" id="s8">
+  <div class="wrap">
+    <div class="sec-eyebrow light">Pre-Seed Round</div>
+    <div class="green-bar light"></div>
+    <h2 class="sec-title light">What we need — and why now</h2>
+    <p class="sec-lead light">The window is open. Website launches in July. Inspection trip in July. International trade show in 2027. Every month of delay is a booking not made and a B2B relationship not built.</p>
+
+    <div class="ask-hero">
+      <div style="font-size:12px;opacity:.6;text-transform:uppercase;letter-spacing:1px;margin-bottom:.4rem">Investment round</div>
+      <div class="ask-amount"><span>USD</span> $80K – $120K</div>
+      <div class="ask-sub">2–3 billion VND · Pre-money valuation: 15 billion VND (~$600K USD)</div>
+      <div class="ask-detail">
+        <div class="ask-item"><div class="ask-item-num">12–15%</div><div class="ask-item-label">Investor equity</div></div>
+        <div class="ask-item"><div class="ask-item-num">8% p.a.</div><div class="ask-item-label">Convertible loan rate</div></div>
+        <div class="ask-item"><div class="ask-item-num">&gt;85%</div><div class="ask-item-label">Founders retain control</div></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:1rem">Use of funds — specifically</h3>
+    <div class="funds-grid">
+      <div class="fund-item">
+        <div class="fund-name">👨‍💼 Founder Salaries</div>
+        <div class="fund-amount">$480/month each</div>
+        <div class="fund-desc">Activated immediately upon investment. Currently both founders are unpaid — covering personal expenses from savings to preserve runway.</div>
+      </div>
+      <div class="fund-item">
+        <div class="fund-name">💻 Website + Mitel AI CRM</div>
+        <div class="fund-amount">~$8,000 USD</div>
+        <div class="fund-desc">Website Phase 1 + all-in-one CRM: booking management, automated quoting, client records. Must be live before July.</div>
+      </div>
+      <div class="fund-item">
+        <div class="fund-name">🗺 North &amp; Central Inspection Trip</div>
+        <div class="fund-amount">~$2,400 USD</div>
+        <div class="fund-desc">Phuc &amp; Tai on the ground in July 2026. Build supplier relationships, photograph locations, finalize the 3 Signature Products.</div>
+      </div>
+      <div class="fund-item">
+        <div class="fund-name">📱 Marketing + Operations</div>
+        <div class="fund-amount">~$400/month</div>
+        <div class="fund-desc">Google Ads, content, SEO, accounting services. Activated after website launch. Controlled burn with clear attribution.</div>
+      </div>
+    </div>
+
+    <div class="highlight gold" style="background:rgba(201,168,76,.12);border-left-color:var(--gold)">
+      <p style="color:rgba(255,255,255,.8)"><strong style="color:var(--gold)">Structure:</strong> Hybrid — 50% equity (12–15% ownership) + 50% convertible loan at 8% p.a. Founders retain over 85% control at all times. Exit: dividend or buyback at Year 3 independent valuation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- S9: RETURNS -->
+<div class="section" id="s9">
+  <div class="wrap">
+    <div class="sec-eyebrow">Investor returns</div>
+    <div class="green-bar"></div>
+    <h2 class="sec-title">3 paths to return — all of them concrete</h2>
+    <p class="sec-lead">This is not a technology startup with a distant exit. This is a luxury service company with real revenue, real clients, and a specific exit roadmap. The hybrid structure protects the downside while preserving full upside.</p>
+
+    <div class="return-grid">
+      <div class="ret">
+        <div class="ret-num">×2–3</div>
+        <div class="ret-title">Founders Buyback — Year 3</div>
+        <div class="ret-desc">End of 2028–2029, Phuc &amp; Tai buy back investor shares at independent valuation. Expected ×2–3x on original capital based on revenue multiples at that stage.</div>
+      </div>
+      <div class="ret">
+        <div class="ret-num" style="color:rgba(255,255,255,.7)">5–15%</div>
+        <div class="ret-title">Annual Dividend — From Year 3–4</div>
+        <div class="ret-desc">Once the company generates stable net profit, annual dividend payments proportional to ownership. Passive income for the long term.</div>
+      </div>
+      <div class="ret">
+        <div class="ret-num" style="color:var(--coral)">×5–10</div>
+        <div class="ret-title">Strategic Sale — Year 6–10</div>
+        <div class="ret-desc">If a global operator (Abercrombie &amp; Kent, The Travel Corporation…) acquires the company. This is the upside scenario — not the primary plan.</div>
+      </div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Exit Option</th><th>Timeline</th><th>Expected Return</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Annual Dividend</strong></td><td>From Year 3–4 (2028–2029)</td><td class="pos">5–15% per year</td></tr>
+          <tr><td><strong>Founders Buyback</strong></td><td>End of Year 3 (2028–2029)</td><td class="pos">×2–3x original capital</td></tr>
+          <tr><td><strong>Strategic Acquisition</strong></td><td>Year 6–10 (Phase 2–3)</td><td class="pos">×3–10x original capital</td></tr>
+          <tr><td><strong>Convertible loan portion</strong></td><td>Ongoing</td><td class="pos">8% p.a. — capital preservation</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="highlight">
+      <p><strong>The hybrid structure protects the investor in both directions:</strong> The 8% p.a. loan portion guarantees a return even if growth is slower than projected. The equity portion preserves full upside when the company reaches $1M–$10M in revenue.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CLOSE -->
+<div class="close-section" id="s10">
+  <div class="hero-ant" style="font-size:2.5rem;margin-bottom:1rem">🐜</div>
+  <h2>Vietnam is waiting.<br>This window only opens once.</h2>
+  <p>Website live in July. Inspection trip in July. Virtuoso Travel Week 2027. Every month we wait is a booking not made, a relationship not built. Phuc and Tai are committed for 10 years — this is the project of a lifetime for both of them.</p>
+
+  <div style="display:inline-block;background:var(--coral);color:#fff;padding:1rem 2.5rem;border-radius:30px;font-weight:700;font-size:.95rem;margin-bottom:3rem;letter-spacing:.3px">
+    Join us in building The Ant Adventures →
+  </div>
+
+  <div class="close-contacts">
+    <div class="contact-item">
+      <div class="contact-name">Phuc Vo</div>
+      <div class="contact-role">Founder &amp; CEO</div>
+      <div class="contact-email">phucvo@theantadventures.com</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-name">Tai Pham</div>
+      <div class="contact-role">Co-Founder, Head of Sales</div>
+      <div class="contact-email">taipham@theantadventures.com</div>
+    </div>
+  </div>
+
+  <div style="margin-top:3rem;font-size:12px;opacity:.3;letter-spacing:.5px">
+    theantadventures.com · 748 Truong Sa, District 3, Ho Chi Minh City, Vietnam<br>
+    Confidential — For prospective investors only · Pre-Seed 2026
+  </div>
+</div>
+
+<footer>
+  🐜 The Ant Adventures · Pre-Seed Investor Pitch · Version 1.0 · May 2026 · Confidential
+</footer>
+
+<script>
+const navLinks=document.querySelectorAll('.nav a');
+const sections=document.querySelectorAll('.section[id],.close-section[id]');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navLinks.forEach(l=>{
+        l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id);
+      });
+    }
+  });
+},{threshold:0.3,rootMargin:'-56px 0px 0px 0px'});
+sections.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
